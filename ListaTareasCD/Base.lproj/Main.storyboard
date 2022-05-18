@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PiY-av-dFQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tareas pendientes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ListaTareasCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xSm-Ch-Gdm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celda" textLabel="Egz-qA-mKO" detailTextLabel="fjy-Yg-txU" imageView="5jC-Cb-ntT" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="ThN-ZO-zAQ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ThN-ZO-zAQ" id="0iX-zn-ge1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Egz-qA-mKO">
+                                                    <rect key="frame" x="59" y="13.5" width="38" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.12967970970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fjy-Yg-txU">
+                                                    <rect key="frame" x="59" y="41" width="53" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="note" catalog="system" id="5jC-Cb-ntT">
+                                                    <rect key="frame" x="21.5" y="28.5" width="21" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xSm-Ch-Gdm" secondAttribute="trailing" id="1Vt-RH-0SY"/>
+                            <constraint firstItem="xSm-Ch-Gdm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BCS-MI-of0"/>
+                            <constraint firstItem="xSm-Ch-Gdm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ecg-rE-gg4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xSm-Ch-Gdm" secondAttribute="bottom" id="wgF-TD-3NS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tareas pendientes" id="ngh-AM-Dbs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="B0e-Ks-2ne">
+                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="agregarTareaBtn:" destination="BYZ-38-t0r" id="dhd-a4-yvD"/>
+                                <segue destination="o3h-7f-f5G" kind="show" identifier="agregarTarea" id="JXF-kW-BmT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tablaTareas" destination="xSm-Ch-Gdm" id="f31-K9-FpH"/>
+                        <segue destination="NS6-22-hEQ" kind="show" identifier="editarTarea" id="CQz-0J-9KO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="103.79464285714285"/>
+        </scene>
+        <!--Nueva tarea-->
+        <scene sceneID="5fD-81-9Dp">
+            <objects>
+                <viewController id="o3h-7f-f5G" customClass="NuevaTareaViewController" customModule="ListaTareasCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uus-AE-R5n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-Bm-3cv">
+                                <rect key="frame" x="20" y="118" width="374" height="748"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe tu nueva tarea" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hS3-op-xk3">
+                                        <rect key="frame" x="47" y="0.0" width="280" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="G6W-PZ-u3T"/>
+                                            <constraint firstAttribute="height" constant="180" id="QeH-GF-BZT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona la fecha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm7-4n-wpy">
+                                        <rect key="frame" x="109.5" y="230" width="155" height="29.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cch-aZ-vFJ">
+                                        <rect key="frame" x="27" y="309.5" width="320" height="218.5"/>
+                                    </datePicker>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zGn-b6-0t9">
+                                        <rect key="frame" x="87" y="579" width="200" height="117.5"/>
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Nry-CY-ceT"/>
+                                            <constraint firstAttribute="width" constant="200" id="sh7-go-syJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDn-cP-tUW">
+                                        <rect key="frame" x="67" y="748" width="240" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jhG-uf-cOM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jhG-uf-cOM" firstAttribute="trailing" secondItem="WQ0-Bm-3cv" secondAttribute="trailing" constant="20" id="J5o-YA-qM7"/>
+                            <constraint firstItem="WQ0-Bm-3cv" firstAttribute="top" secondItem="jhG-uf-cOM" secondAttribute="top" constant="30" id="LVL-I8-Pc5"/>
+                            <constraint firstItem="WQ0-Bm-3cv" firstAttribute="leading" secondItem="uus-AE-R5n" secondAttribute="leading" constant="20" id="gNx-8k-Ihl"/>
+                            <constraint firstAttribute="bottom" secondItem="WQ0-Bm-3cv" secondAttribute="bottom" constant="30" id="rHf-Av-3ct"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nueva tarea" id="wK3-Fp-Nbg">
+                        <barButtonItem key="rightBarButtonItem" title="guardar" image="checkmark.circle" catalog="system" id="bTt-8V-kwa">
+                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="guardarTarea:" destination="o3h-7f-f5G" id="Dkd-Jm-qb5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fechaTareaPicker" destination="cch-aZ-vFJ" id="iPN-qk-iLD"/>
+                        <outlet property="imagenTarea" destination="zGn-b6-0t9" id="Adh-5a-oIL"/>
+                        <outlet property="textoTarea" destination="hS3-op-xk3" id="jJt-f0-XLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vu-XI-yZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816" y="-129"/>
+        </scene>
+        <!--Editar tarea-->
+        <scene sceneID="k7H-zD-pKd">
+            <objects>
+                <viewController id="NS6-22-hEQ" customClass="EditartareaViewController" customModule="ListaTareasCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afP-IA-Opt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dsA-1j-hww">
+                                <rect key="frame" x="20" y="118" width="374" height="748"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe tu nueva tarea" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqw-QS-kyP">
+                                        <rect key="frame" x="47" y="0.0" width="280" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="e5A-g6-U16"/>
+                                            <constraint firstAttribute="height" constant="180" id="fCN-5X-zvc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona la fecha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqw-lj-hU8">
+                                        <rect key="frame" x="109.5" y="230" width="155" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UtK-Et-H8U">
+                                        <rect key="frame" x="27" y="305.5" width="320" height="132.5"/>
+                                    </datePicker>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pwn-rJ-Ztp">
+                                        <rect key="frame" x="87" y="489" width="200" height="117.5"/>
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="4il-4u-npk"/>
+                                            <constraint firstAttribute="height" constant="120" id="IpY-DL-wO3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="X91-od-1iq">
+                                        <rect key="frame" x="20.5" y="658" width="333" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-DE-ZNy">
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="40"/>
+                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="9tG-zB-Sqd">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="     Guardar     ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="guardarBtn:" destination="NS6-22-hEQ" eventType="touchUpInside" id="1RS-6y-qvh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxD-rq-2gH">
+                                                <rect key="frame" x="187" y="0.0" width="146" height="40"/>
+                                                <color key="backgroundColor" red="0.97840656729999997" green="0.26902671119999999" blue="0.36202675229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="     Cancelar     ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="acncelarBtn:" destination="NS6-22-hEQ" eventType="touchUpInside" id="wQ3-UM-CDe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLR-6Z-AOM">
+                                        <rect key="frame" x="67" y="748" width="240" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AKI-xY-DKO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dsA-1j-hww" secondAttribute="bottom" constant="30" id="7j5-QJ-8lz"/>
+                            <constraint firstItem="dsA-1j-hww" firstAttribute="leading" secondItem="AKI-xY-DKO" secondAttribute="leading" constant="20" id="EbO-W0-7xQ"/>
+                            <constraint firstItem="dsA-1j-hww" firstAttribute="top" secondItem="AKI-xY-DKO" secondAttribute="top" constant="30" id="Gfr-Xc-yHF"/>
+                            <constraint firstAttribute="trailing" secondItem="dsA-1j-hww" secondAttribute="trailing" constant="20" id="d7e-29-b7l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editar tarea" id="cjf-Ge-Gqo"/>
+                    <connections>
+                        <outlet property="fechaTarea" destination="UtK-Et-H8U" id="Aax-Fn-Gey"/>
+                        <outlet property="imagenTarea" destination="Pwn-rJ-Ztp" id="8qb-zs-a5U"/>
+                        <outlet property="tituloTarea" destination="iqw-QS-kyP" id="VyR-DJ-daq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="je9-2h-DKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1787" y="609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="boE-Si-mYQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiY-av-dFQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aQt-Yy-48H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n7i-j8-T8R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDp-6T-D9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="note" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
